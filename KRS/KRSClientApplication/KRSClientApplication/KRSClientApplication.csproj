@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08CC4A7B-BF43-4D91-B9B2-34A3CCB81690}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KRSClientApplication</RootNamespace>
+    <AssemblyName>KRSClientApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.EntityFrameworkCore.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.EntityFrameworkCore.Relational.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational.Design, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.EntityFrameworkCore.Relational.Design.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.Relational.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.EntityFrameworkCore.SqlServer.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer.Design, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.EntityFrameworkCore.SqlServer.Design.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.SqlServer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.Caching.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.Caching.Memory.1.1.1\lib\net451\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.DependencyInjection.1.1.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.Logging.1.1.1\lib\netstandard1.1\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.Logging.Abstractions.1.1.1\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.Options.1.1.1\lib\netstandard1.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Microsoft.Extensions.Primitives.1.1.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\Remotion.Linq.2.1.1\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\System.Collections.Immutable.1.3.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\portable-net45+win8+wpa81\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\System.Interactive.Async.3.0.0\lib\net45\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\System.Runtime.CompilerServices.Unsafe.4.3.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\KRSServer\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatalogsStrategy.cs" />
+    <Compile Include="Models\Adressee.cs" />
+    <Compile Include="Models\Authorization.cs" />
+    <Compile Include="Models\Batch.cs" />
+    <Compile Include="Models\Configuration.cs" />
+    <Compile Include="Models\CostJournal.cs" />
+    <Compile Include="Models\KRSDataBaseContext.cs" />
+    <Compile Include="Models\Pallet.cs" />
+    <Compile Include="Models\Provider.cs" />
+    <Compile Include="Models\ProviderSelect.cs" />
+    <Compile Include="Models\SchemeType.cs" />
+    <Compile Include="Models\Send.cs" />
+    <Compile Include="Models\Skin.cs" />
+    <Compile Include="Models\SkinType.cs" />
+    <Compile Include="Models\SortingScheme.cs" />
+    <Compile Include="Models\SortingSelect.cs" />
+    <Compile Include="Models\Sorts.cs" />
+    <Compile Include="PalletsStrategy.cs" />
+    <Compile Include="Proxy\AdresseeProxy.cs" />
+    <Compile Include="Proxy\BatchProxy.cs" />
+    <Compile Include="Proxy\ConfigurationProxy.cs" />
+    <Compile Include="Proxy\PalletProxy.cs" />
+    <Compile Include="Proxy\ProviderProxy.cs" />
+    <Compile Include="Proxy\SchemeProxy.cs" />
+    <Compile Include="Proxy\SkinProxy.cs" />
+    <Compile Include="Proxy\SkinTypeProxy.cs" />
+    <Compile Include="Proxy\SortingProxy.cs" />
+    <Compile Include="ResponseWriter.cs" />
+    <Compile Include="ResponseReader.cs" />
+    <Compile Include="Views\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BatchBrowsing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BatchBrowsing.Designer.cs">
+      <DependentUpon>BatchBrowsing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BatchRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BatchRegistration.Designer.cs">
+      <DependentUpon>BatchRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogsMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CatalogsMDI.Designer.cs">
+      <DependentUpon>CatalogsMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CatalogView.Designer.cs">
+      <DependentUpon>CatalogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Costing.Designer.cs">
+      <DependentUpon>Costing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Management.Designer.cs">
+      <DependentUpon>Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PalletManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PalletManagement.Designer.cs">
+      <DependentUpon>PalletManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PalletView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PalletView.Designer.cs">
+      <DependentUpon>PalletView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProviderRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProviderRegistration.Designer.cs">
+      <DependentUpon>ProviderRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SelectorMenu.Designer.cs">
+      <DependentUpon>SelectorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\SkinTypeAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SkinTypeAdding.Designer.cs">
+      <DependentUpon>SkinTypeAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sorting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Sorting.Designer.cs">
+      <DependentUpon>Sorting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SortingSchemeAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SortingSchemeAdding.Designer.cs">
+      <DependentUpon>SortingSchemeAdding.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BatchBrowsing.resx">
+      <DependentUpon>BatchBrowsing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BatchRegistration.resx">
+      <DependentUpon>BatchRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CatalogsMDI.resx">
+      <DependentUpon>CatalogsMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CatalogView.resx">
+      <DependentUpon>CatalogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Costing.resx">
+      <DependentUpon>Costing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Management.resx">
+      <DependentUpon>Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PalletManagement.resx">
+      <DependentUpon>PalletManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PalletView.resx">
+      <DependentUpon>PalletView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProviderRegistration.resx">
+      <DependentUpon>ProviderRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SelectorMenu.resx">
+      <DependentUpon>SelectorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\SkinTypeAdding.resx">
+      <DependentUpon>SkinTypeAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Sorting.resx">
+      <DependentUpon>Sorting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SortingSchemeAdding.resx">
+      <DependentUpon>SortingSchemeAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Управление.jpg" />
+    <None Include="Resources\converted_file_0584b1d8.ico" />
+    <Content Include="Resources\tcmd.png" />
+    <Content Include="Resources\Коровка.jpg" />
+    <Content Include="Resources\Монетки.jpg" />
+    <None Include="Resources\Партия.jpg" />
+    <SplashScreen Include="Resources\Погрузчик.jpg" />
+    <Content Include="Resources\Поддоны.jpg" />
+    <Content Include="Resources\Справочник.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

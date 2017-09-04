@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=DESKTOP-5IPET5F\SQLEXPRESS;Initial Catalog=KRSDataBase;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
